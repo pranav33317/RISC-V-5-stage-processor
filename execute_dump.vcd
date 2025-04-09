@@ -1,0 +1,273 @@
+$date
+	Wed Apr  9 15:18:19 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 32 ! WriteDataM [31:0] $end
+$var wire 2 " ResultSrcM [1:0] $end
+$var wire 1 # RegWriteM $end
+$var wire 5 $ RD_M [4:0] $end
+$var wire 32 % PCTargetE [31:0] $end
+$var wire 1 & PCSrcE $end
+$var wire 32 ' PCPlus4M [31:0] $end
+$var wire 1 ( MemWriteM $end
+$var wire 32 ) ALU_ResultM [31:0] $end
+$var reg 3 * ALUControlE [2:0] $end
+$var reg 1 + ALUSrcE $end
+$var reg 1 , BranchE $end
+$var reg 32 - Imm_Ext_E [31:0] $end
+$var reg 1 . JumpE $end
+$var reg 1 / MemWriteE $end
+$var reg 32 0 PCE [31:0] $end
+$var reg 32 1 PCPlus4E [31:0] $end
+$var reg 32 2 RD1_E [31:0] $end
+$var reg 32 3 RD2_E [31:0] $end
+$var reg 5 4 RD_E [4:0] $end
+$var reg 1 5 RegWriteE $end
+$var reg 2 6 ResultSrcE [1:0] $end
+$var reg 1 7 clk $end
+$var reg 1 8 rst $end
+$scope module dut $end
+$var wire 3 9 ALUControlE [2:0] $end
+$var wire 1 + ALUSrcE $end
+$var wire 32 : ALU_ResultM [31:0] $end
+$var wire 1 , BranchE $end
+$var wire 32 ; Imm_Ext_E [31:0] $end
+$var wire 1 . JumpE $end
+$var wire 1 / MemWriteE $end
+$var wire 1 ( MemWriteM $end
+$var wire 32 < PCE [31:0] $end
+$var wire 32 = PCPlus4E [31:0] $end
+$var wire 32 > PCPlus4M [31:0] $end
+$var wire 1 & PCSrcE $end
+$var wire 32 ? RD1_E [31:0] $end
+$var wire 32 @ RD2_E [31:0] $end
+$var wire 5 A RD_E [4:0] $end
+$var wire 5 B RD_M [4:0] $end
+$var wire 1 5 RegWriteE $end
+$var wire 1 # RegWriteM $end
+$var wire 2 C ResultSrcE [1:0] $end
+$var wire 2 D ResultSrcM [1:0] $end
+$var wire 32 E WriteDataE [31:0] $end
+$var wire 32 F WriteDataM [31:0] $end
+$var wire 1 7 clk $end
+$var wire 1 8 rst $end
+$var wire 1 G ZeroE $end
+$var wire 32 H Src_BE [31:0] $end
+$var wire 32 I PCTargetE [31:0] $end
+$var wire 32 J ALU_ResultE [31:0] $end
+$var reg 32 K ALU_ResultE_r [31:0] $end
+$var reg 1 L MemWriteE_r $end
+$var reg 32 M PCPlus4E_r [31:0] $end
+$var reg 5 N RD_E_r [4:0] $end
+$var reg 1 O RegWriteE_r $end
+$var reg 2 P ResultSrcE_r [1:0] $end
+$var reg 32 Q WriteDataE_r [31:0] $end
+$scope module alu $end
+$var wire 32 R A [31:0] $end
+$var wire 3 S ALUControl [2:0] $end
+$var wire 1 T Carry $end
+$var wire 1 U OverFlow $end
+$var wire 1 G Zero $end
+$var wire 32 V Sum [31:0] $end
+$var wire 32 W Result [31:0] $end
+$var wire 1 X Negative $end
+$var wire 1 Y Cout $end
+$var wire 32 Z B [31:0] $end
+$upscope $end
+$scope module branch_adder $end
+$var wire 32 [ a [31:0] $end
+$var wire 32 \ b [31:0] $end
+$var wire 32 ] c [31:0] $end
+$upscope $end
+$scope module mux1 $end
+$var wire 32 ^ a [31:0] $end
+$var wire 32 _ b [31:0] $end
+$var wire 1 + s $end
+$var wire 32 ` c [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+xY
+xX
+bx W
+bx V
+xU
+xT
+bx S
+bx R
+bx Q
+bx P
+xO
+bx N
+bx M
+xL
+bx K
+bx J
+bx I
+bx H
+xG
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+18
+07
+bx 6
+x5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+x/
+x.
+bx -
+x,
+x+
+bx *
+bx )
+x(
+bx '
+x&
+bx %
+bx $
+x#
+bx "
+bx !
+$end
+#50
+b0 )
+b0 :
+b0 K
+b0 !
+b0 F
+b0 Q
+b0 '
+b0 >
+b0 M
+b0 $
+b0 B
+b0 N
+b0 "
+b0 D
+b0 P
+0(
+0L
+0#
+0O
+17
+#100
+07
+#150
+17
+#200
+07
+#250
+17
+#300
+0U
+0X
+0G
+b100010000 J
+b100010000 W
+0T
+b100010000 V
+0Y
+0&
+b100000000 H
+b100000000 Z
+b100000000 `
+b1100 4
+b1100 A
+b11001 %
+b11001 I
+b11001 ]
+b1111 -
+b1111 ;
+b1111 \
+b1111 _
+b1010 0
+b1010 <
+b1010 [
+b10000000000000000000000000000 1
+b10000000000000000000000000000 =
+b100000000 E
+b100000000 3
+b100000000 @
+b100000000 ^
+b10000 2
+b10000 ?
+b10000 R
+b0 *
+b0 9
+b0 S
+b0 6
+b0 C
+0+
+0,
+0.
+0/
+05
+08
+07
+#350
+b100010000 )
+b100010000 :
+b100010000 K
+b100000000 !
+b100000000 F
+b100000000 Q
+b10000000000000000000000000000 '
+b10000000000000000000000000000 >
+b10000000000000000000000000000 M
+b1100 $
+b1100 B
+b1100 N
+17
+#400
+07
+#450
+17
+#500
+07
+#550
+17
+#600
+07
+#650
+17
+#700
+07
+#750
+17
+#800
+07

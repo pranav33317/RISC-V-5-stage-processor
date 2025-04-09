@@ -1,0 +1,113 @@
+#! /usr/local/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x7f8e88908040 .scope module, "tb" "tb" 2 1;
+ .timescale 0 0;
+v0x7f8e8891ed10_0 .var "ALU_ResultW", 31 0;
+v0x7f8e8891eda0_0 .var "PCPlus4W", 31 0;
+v0x7f8e8891ee80_0 .var "ReadDataW", 31 0;
+v0x7f8e8891ef50_0 .var "ResultSrcW", 1 0;
+v0x7f8e8891efe0_0 .net "ResultW", 31 0, L_0x7f8e8891f530;  1 drivers
+v0x7f8e8891f0f0_0 .var "clk", 0 0;
+v0x7f8e8891f180_0 .var "rst", 0 0;
+S_0x7f8e88906ee0 .scope module, "dut" "writeback_cycle" 2 7, 3 2 0, S_0x7f8e88908040;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 2 "ResultSrcW";
+    .port_info 3 /INPUT 32 "PCPlus4W";
+    .port_info 4 /INPUT 32 "ALU_ResultW";
+    .port_info 5 /INPUT 32 "ReadDataW";
+    .port_info 6 /OUTPUT 32 "ResultW";
+v0x7f8e8891e6b0_0 .net "ALU_ResultW", 31 0, v0x7f8e8891ed10_0;  1 drivers
+v0x7f8e8891e760_0 .net "PCPlus4W", 31 0, v0x7f8e8891eda0_0;  1 drivers
+v0x7f8e8891e810_0 .net "ReadDataW", 31 0, v0x7f8e8891ee80_0;  1 drivers
+v0x7f8e8891e8e0_0 .net "ResultSrcW", 1 0, v0x7f8e8891ef50_0;  1 drivers
+v0x7f8e8891e970_0 .net "ResultW", 31 0, L_0x7f8e8891f530;  alias, 1 drivers
+v0x7f8e8891ea50_0 .net "clk", 0 0, v0x7f8e8891f0f0_0;  1 drivers
+v0x7f8e8891eae0_0 .net "intermediate_mux", 31 0, L_0x7f8e8891f2c0;  1 drivers
+v0x7f8e8891ebc0_0 .net "rst", 0 0, v0x7f8e8891f180_0;  1 drivers
+L_0x7f8e8891f3a0 .part v0x7f8e8891ef50_0, 1, 1;
+L_0x7f8e8891f690 .part v0x7f8e8891ef50_0, 0, 1;
+S_0x7f8e8890e190 .scope module, "mux1" "Mux" 3 12, 4 14 0, S_0x7f8e88906ee0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 32 "c";
+L_0x7f8e8891f210 .functor NOT 1, L_0x7f8e8891f3a0, C4<0>, C4<0>, C4<0>;
+v0x7f8e889081b0_0 .net *"_ivl_0", 0 0, L_0x7f8e8891f210;  1 drivers
+v0x7f8e8891dd50_0 .net "a", 31 0, v0x7f8e8891ed10_0;  alias, 1 drivers
+v0x7f8e8891de00_0 .net "b", 31 0, v0x7f8e8891eda0_0;  alias, 1 drivers
+v0x7f8e8891dec0_0 .net "c", 31 0, L_0x7f8e8891f2c0;  alias, 1 drivers
+v0x7f8e8891df70_0 .net "s", 0 0, L_0x7f8e8891f3a0;  1 drivers
+L_0x7f8e8891f2c0 .functor MUXZ 32, v0x7f8e8891eda0_0, v0x7f8e8891ed10_0, L_0x7f8e8891f210, C4<>;
+S_0x7f8e8891e090 .scope module, "mux2" "Mux" 3 19, 4 14 0, S_0x7f8e88906ee0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 32 "c";
+L_0x7f8e8891f4c0 .functor NOT 1, L_0x7f8e8891f690, C4<0>, C4<0>, C4<0>;
+v0x7f8e8891e2c0_0 .net *"_ivl_0", 0 0, L_0x7f8e8891f4c0;  1 drivers
+v0x7f8e8891e370_0 .net "a", 31 0, L_0x7f8e8891f2c0;  alias, 1 drivers
+v0x7f8e8891e430_0 .net "b", 31 0, v0x7f8e8891ee80_0;  alias, 1 drivers
+v0x7f8e8891e4e0_0 .net "c", 31 0, L_0x7f8e8891f530;  alias, 1 drivers
+v0x7f8e8891e590_0 .net "s", 0 0, L_0x7f8e8891f690;  1 drivers
+L_0x7f8e8891f530 .functor MUXZ 32, v0x7f8e8891ee80_0, L_0x7f8e8891f2c0, L_0x7f8e8891f4c0, C4<>;
+    .scope S_0x7f8e88908040;
+T_0 ;
+    %load/vec4 v0x7f8e8891f0f0_0;
+    %inv;
+    %store/vec4 v0x7f8e8891f0f0_0, 0, 1;
+    %delay 50, 0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x7f8e88908040;
+T_1 ;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x7f8e8891f180_0, 0;
+    %delay 300, 0;
+    %pushi/vec4 6485043, 0, 32;
+    %assign/vec4 v0x7f8e8891eda0_0, 0;
+    %pushi/vec4 256, 0, 32;
+    %assign/vec4 v0x7f8e8891ed10_0, 0;
+    %pushi/vec4 202309632, 0, 32;
+    %assign/vec4 v0x7f8e8891ee80_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x7f8e8891ef50_0, 0;
+    %delay 100, 0;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x7f8e8891ef50_0, 0;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 2;
+    %assign/vec4 v0x7f8e8891ef50_0, 0;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x7f8e8891ef50_0, 0;
+    %delay 100, 0;
+    %pushi/vec4 3, 0, 2;
+    %assign/vec4 v0x7f8e8891ef50_0, 0;
+    %delay 100, 0;
+    %vpi_call 2 31 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x7f8e88908040;
+T_2 ;
+    %vpi_call 2 36 "$dumpfile", "writeback_dump.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7f8e88908040 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "Writeback_Cycle_tb.v";
+    "Writeback_Cycle.v";
+    "./Mux.v";

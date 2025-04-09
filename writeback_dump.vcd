@@ -1,0 +1,128 @@
+$date
+	Wed Apr  9 16:21:18 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 32 ! ResultW [31:0] $end
+$var reg 32 " ALU_ResultW [31:0] $end
+$var reg 32 # PCPlus4W [31:0] $end
+$var reg 32 $ ReadDataW [31:0] $end
+$var reg 2 % ResultSrcW [1:0] $end
+$var reg 1 & clk $end
+$var reg 1 ' rst $end
+$scope module dut $end
+$var wire 32 ( ALU_ResultW [31:0] $end
+$var wire 32 ) PCPlus4W [31:0] $end
+$var wire 32 * ReadDataW [31:0] $end
+$var wire 2 + ResultSrcW [1:0] $end
+$var wire 1 & clk $end
+$var wire 1 ' rst $end
+$var wire 32 , intermediate_mux [31:0] $end
+$var wire 32 - ResultW [31:0] $end
+$scope module mux1 $end
+$var wire 32 . a [31:0] $end
+$var wire 32 / b [31:0] $end
+$var wire 1 0 s $end
+$var wire 32 1 c [31:0] $end
+$upscope $end
+$scope module mux2 $end
+$var wire 32 2 a [31:0] $end
+$var wire 32 3 b [31:0] $end
+$var wire 1 4 s $end
+$var wire 32 5 c [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 5
+x4
+bx 3
+bx 2
+bx 1
+x0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+1'
+x&
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#300
+00
+04
+b100000000 !
+b100000000 -
+b100000000 5
+b100000000 ,
+b100000000 1
+b100000000 2
+b0 %
+b0 +
+b1100000011110000000000000000 $
+b1100000011110000000000000000 *
+b1100000011110000000000000000 3
+b100000000 "
+b100000000 (
+b100000000 .
+b11000101111010000110011 #
+b11000101111010000110011 )
+b11000101111010000110011 /
+#400
+b11000101111010000110011 !
+b11000101111010000110011 -
+b11000101111010000110011 5
+b11000101111010000110011 ,
+b11000101111010000110011 1
+b11000101111010000110011 2
+10
+b10 %
+b10 +
+#500
+b100000000 ,
+b100000000 1
+b100000000 2
+b1100000011110000000000000000 !
+b1100000011110000000000000000 -
+b1100000011110000000000000000 5
+00
+14
+b1 %
+b1 +
+#600
+b100000000 !
+b100000000 -
+b100000000 5
+04
+b0 %
+b0 +
+#700
+b11000101111010000110011 ,
+b11000101111010000110011 1
+b11000101111010000110011 2
+b1100000011110000000000000000 !
+b1100000011110000000000000000 -
+b1100000011110000000000000000 5
+10
+14
+b11 %
+b11 +
+#800
